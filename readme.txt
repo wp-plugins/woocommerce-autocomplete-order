@@ -1,10 +1,10 @@
 === WooCommerce Autocomplete Order ===
 Contributors: rashef
 Donate link: http://cl.ly/0m1h2L3u0K3Y
-Tags: WooCommerce, order, completed
+Tags: WooCommerce, order, completed, virtual
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 0.1
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,11 +23,17 @@ WooCommerce will mark virtual-downloadable orders as "completed" after successfu
 == Frequently asked questions ==
 
 = Is there anything I can configure? =
+
 Just not yet...
 
 == Changelog ==
+
+= v0.1.1 =
+* Added links to support and the official page.
 
 = v0.1 =
 * First release.
 
 == Upgrade notice ==
+
+Nothing you should worry about! ;)

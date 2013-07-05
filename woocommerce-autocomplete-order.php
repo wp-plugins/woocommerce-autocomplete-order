@@ -3,7 +3,7 @@
 	Plugin Name: WooCommerce - Autocomplete Order
 	Plugin URI: 
 	Description: This plugin allows to automatically set any order for any virtual product on Completed status right after a successfull payment.
-	Version: 0.1
+	Version: 0.1.1
 	Author: Mirko Grewing
 	Author URI: http://www.mirkogrewing.eu	
 		
