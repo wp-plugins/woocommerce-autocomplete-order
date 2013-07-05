@@ -22,9 +22,8 @@ WooCommerce will mark virtual-downloadable orders as "completed" after successfu
 
 == Frequently asked questions ==
 
-= Is there anything I can configure? =
-
-Just not yet...
+= Where I can find the FAQ? =
+[Here!](http://support.mirkogrewing.eu/kb/index.php "FAQ")
 
 == Changelog ==
 
