@@ -14,6 +14,10 @@ This plugin allows to automatically mark orders for virtual products as Complete
 
 WooCommerce by design marks orders for product with "virtual" and "downloadable" flags on as Completed after a successful payment. This plugin allows to extend the same functionality to products that have just the "virtual" flag on.
 
+Do you want to raise a bug, propose a change, request for support or simply say hi? The Official Page of the plugin is waiting for your voice!
+
+http://www.mirkogrewing.it/woocommerce-autocomplete-orders/
+
 == Installation ==
 
 1. Upload the plugin's folder to the `/wp-content/plugins/` directory
