@@ -1,22 +1,19 @@
 === WooCommerce Autocomplete Order ===
 Contributors: rashef
-Donate link: http://cl.ly/0m1h2L3u0K3Y
-Tags: WooCommerce, order, completed, virtual
+Donate link: http://cl.ly/2C2W181j1G2g
+Tags: WooCommerce, order, complete, virtual, autocomplete
 Requires at least: 3.3
-Tested up to: 3.7.1
-Stable tag: 0.1.1
+Tested up to: 4.0.0
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows to automatically mark orders for virtual products as Completed after a successful payment (e.g. with PayPal or Credit Card).
+Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders for <strong>virtual</strong> products as Completed after a successful payment (e.g. with PayPal or Credit Card).
 
 == Description ==
 
-WooCommerce by design marks orders for product with "virtual" and "downloadable" flags on as Completed after a successful payment. This plugin allows to extend the same functionality to products that have just the "virtual" flag on.
-
-Do you want to raise a bug, propose a change, request for support or simply say hi? The Official Page of the plugin is waiting for your voice!
-
-http://www.mirkogrewing.it/woocommerce-autocomplete-orders/
+WooCommerce by design allows to automatically mark as compelted only orders for product marked as "virtual" and "downloadable". This plugin allows to extend the same functionality to products that have just the "virtual" flag on so you can still benefit from the same features reserved to physical products.
+Please be aware that in any case WooCommerce allows to mark an order as completed only upon a successful payment and therefore this plugin will not allow the order to be approved if the order is paid with money transfer or "cash-on-delivery".
 
 == Installation ==
 
@@ -26,10 +23,22 @@ http://www.mirkogrewing.it/woocommerce-autocomplete-orders/
 
 == Frequently asked questions ==
 
-= Where I can find the FAQ? =
-[Here!](http://support.mirkogrewing.it/kb/index.php "FAQ")
+= The plugin is not working =
+Please ensure that all the products listed in the order are "virtual".
+
+= Uh-uh, still not working! =
+If you are testing with PayPal, please ensure that in WooCommerce settings you are using the "Primary Email" the PayPal account is associated to. Using a secondary email might prevent the payment notification from reaching WooCommerce and the order cannot be completed without proof of payment.
+
+= No dude, not working yet! =
+Please deactivate my plugin, test with a product marked as "virtual" **and** "downloadable". If it still doesn't work, then there's something wrong in your WooCommerce configuration or in your payment gateway. If it does work, please write me through the forum!
 
 == Changelog ==
+
+= v0.1.2 =
+* Updated compatibility.
+* Added localization support.
+* Added Italian localization.
+* Added Spanish localization.
 
 = v0.1.1 =
 * Added links to support and the official page.
@@ -39,4 +48,5 @@ http://www.mirkogrewing.it/woocommerce-autocomplete-orders/
 
 == Upgrade notice ==
 
-Nothing you should worry about! ;)
+* Tested with WordPress 4.0 and the latest version of WooCommerce.
+* Added Italian and Spanish translations.
