@@ -13,9 +13,10 @@ Do you hate WooCommerce for obliging you to manually approve every order placed 
 == Description ==
 
 WooCommerce by design allows to automatically mark as "Compelted" only orders for products marked as both "Virtual" and "Downloadable". This plugin actually extend this feature through 3 different modes:
-    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
-	* All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
-	* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+
+* Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
+* All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
 Please be aware that the third mode allows the customer to immediately access the product (if downloadable, for example) whether or not the payment was performed.
 
 == Installation ==
@@ -43,30 +44,30 @@ Please deactivate my plugin (or select mode "Off"), test with a product marked a
 == Changelog ==
 
 = 1.0 =
-    * Plugin completely rewritten to comply with WordPress 4.0 and WooCommerce 2.0.      
-	* Added 3 different modes to ativate the plugin:       
-	    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.           
-	    * All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
-	    * All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
-    * Added a settings page (in WooCommerce dashboard) to select the mode we want to activate (under WooCommerce > Settings > Woo Extra Options).      
+* Plugin completely rewritten to comply with WordPress 4.0 and WooCommerce 2.0.      
+* Added 3 different modes to ativate the plugin:       
+** Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.           
+** All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+** All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+* Added a settings page (in WooCommerce dashboard) to select the mode we want to activate (under WooCommerce > Settings > Woo Extra Options).      
 	
 = v0.1.2 =
-    * Updated compatibility.     
-    * Added localization support.     
-    * Added Italian localization.     
-    * Added Spanish localization.     
+* Updated compatibility.     
+* Added localization support.     
+* Added Italian localization.     
+* Added Spanish localization.     
 
 = v0.1.1 =
-    * Added links to support and the official page.     
+* Added links to support and the official page.     
 	
 = v0.1 =
-    * First release.     
+* First release.     
 
 == Upgrade notice ==
 
 The plugin has been completely rewritten to meet requirements for WP4 and WooCommerce 2.0.      
 A new tab has been added to WooCommerce settings in the Dashboard to select in which mode you want the plugin to work:    
-    * autocomplete only orders for virtual product     
-	* autocomplete every order once paid     
-	* autocomplete every order even if not paid     
+* autocomplete only orders for virtual product     
+* autocomplete every order once paid     
+* autocomplete every order even if not paid     
 Enjoy!
