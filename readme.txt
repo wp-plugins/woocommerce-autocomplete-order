@@ -4,7 +4,7 @@ Donate link: http://cl.ly/2C2W181j1G2g
 Tags: WooCommerce, order, complete, virtual, autocomplete
 Requires at least: 3.3
 Tested up to: 4.0.0
-Stable tag: 0.1.2
+Stable tag: 1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
