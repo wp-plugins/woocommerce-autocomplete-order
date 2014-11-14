@@ -8,7 +8,7 @@ Stable tag: 1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders as Completed through 3 different modes.
+Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin allows to automatically mark orders as Completed.
 
 == Description ==
 
