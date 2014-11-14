@@ -5,15 +5,18 @@ Tags: WooCommerce, order, complete, virtual, autocomplete
 Requires at least: 3.3
 Tested up to: 4.0.0
 Stable tag: 0.1.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders for <strong>virtual</strong> products as Completed after a successful payment (e.g. with PayPal or Credit Card).
+Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders as Completed through 3 different modes.
 
 == Description ==
 
-WooCommerce by design allows to automatically mark as compelted only orders for product marked as "virtual" and "downloadable". This plugin allows to extend the same functionality to products that have just the "virtual" flag on so you can still benefit from the same features reserved to physical products.
-Please be aware that in any case WooCommerce allows to mark an order as completed only upon a successful payment and therefore this plugin will not allow the order to be approved if the order is paid with money transfer or "cash-on-delivery".
+WooCommerce by design allows to automatically mark as "Compelted" only orders for products marked as both "Virtual" and "Downloadable". This plugin actually extend this feature through 3 different modes:
+    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
+	* All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+	* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+Please be aware that the third mode allows the customer to immediately access the product (if downloadable, for example) whether or not the payment was performed.
 
 == Installation ==
 
@@ -21,32 +24,49 @@ Please be aware that in any case WooCommerce allows to mark an order as complete
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Flag as "Virtual" all the products you want to be unlocked for users upon successful payment without any further (manual) action from you in the backoffice
 
+== Screenshots ==
+
+1. Go to the settings page from the Dashboard.
+2. Activate the mode you prefer.
+
 == Frequently asked questions ==
 
 = The plugin is not working =
-Please ensure that all the products listed in the order are "virtual".
+Please ensure that you picked the right mode from the list.      
 
 = Uh-uh, still not working! =
-If you are testing with PayPal, please ensure that in WooCommerce settings you are using the "Primary Email" the PayPal account is associated to. Using a secondary email might prevent the payment notification from reaching WooCommerce and the order cannot be completed without proof of payment.
+If you are testing with PayPal, you must ensure that the [ICN](https://developer.paypal.com/webapps/developer/docs/classic/products/instant-payment-notification/) - Instant Payment notification - is working properly. One of the most common problem is using in WooCommerce an e-mail which is not the primary email used to register the PayPal account.      
 
 = No dude, not working yet! =
-Please deactivate my plugin, test with a product marked as "virtual" **and** "downloadable". If it still doesn't work, then there's something wrong in your WooCommerce configuration or in your payment gateway. If it does work, please write me through the forum!
+Please deactivate my plugin (or select mode "Off"), test with a product marked as "virtual" and "downloadable". If it still doesn't work, then there's something wrong in your WooCommerce configuration or in your payment gateway. If it does work, please write me through the forum!       
 
 == Changelog ==
 
+= 1.0 =
+    * Plugin completely rewritten to comply with WordPress 4.0 and WooCommerce 2.0.      
+	* Added 3 different modes to ativate the plugin:       
+	    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.           
+	    * All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+	    * All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+    * Added a settings page (in WooCommerce dashboard) to select the mode we want to activate (under WooCommerce > Settings > Woo Extra Options).      
+	
 = v0.1.2 =
-* Updated compatibility.
-* Added localization support.
-* Added Italian localization.
-* Added Spanish localization.
+    * Updated compatibility.     
+    * Added localization support.     
+    * Added Italian localization.     
+    * Added Spanish localization.     
 
 = v0.1.1 =
-* Added links to support and the official page.
-
+    * Added links to support and the official page.     
+	
 = v0.1 =
-* First release.
+    * First release.     
 
 == Upgrade notice ==
 
-* Tested with WordPress 4.0 and the latest version of WooCommerce.
-* Added Italian and Spanish translations.
+The plugin has been completely rewritten to meet requirements for WP4 and WooCommerce 2.0.      
+A new tab has been added to WooCommerce settings in the Dashboard to select in which mode you want the plugin to work:    
+    * autocomplete only orders for virtual product     
+	* autocomplete every order once paid     
+	* autocomplete every order even if not paid     
+Enjoy!
