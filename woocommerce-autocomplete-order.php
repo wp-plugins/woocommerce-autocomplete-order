@@ -3,7 +3,7 @@
 	Plugin Name: WooCommerce - Autocomplete Order
 	Plugin URI: 
 	Description: Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders for **virtual** products as Completed after a successful payment (e.g. with PayPal or Credit Card).
-	Version: 1.1
+	Version: 1.0
 	Author: Mirko Grewing
 	Author URI: http://www.mirkogrewing.it	
 		
@@ -24,7 +24,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
          * @author    Mirko Grewing <mirko@grewing.co.uk>
          * @copyright 2014 Mirko Grewing
          * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
-         * @version   1.1
+         * @version   1.0
          * @link      http://www.nitelab.org/
          * @since     Class available since Release 0.1
          *
@@ -44,18 +44,16 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
              */
             function __construct()
             {
-				if (is_admin()) {
-					//add settings tab
-					add_filter('woocommerce_settings_tabs_array', array($this,'woocommerce_settings_tabs_array'), 50);
-					//show settings tab
-					add_action('woocommerce_settings_tabs_'.$this->id, array($this,'show_settings_tab'));
-					//save settings tab 
-					add_action('woocommerce_update_options_'.$this->id, array($this,'update_settings_tab'));
-					//add tabs select field
-					add_action('woocommerce_admin_field_'.$this->id,array($this, 'show_'.$this->id.'_field'), 10);
-					//save tabs select field
-					add_action('woocommerce_update_option_'.$this->id,array($this, 'save_'.$this->id.'_field'), 10);
-				}
+                //add settings tab
+                add_filter('woocommerce_settings_tabs_array', array($this,'woocommerce_settings_tabs_array'), 50);
+                //show settings tab
+                add_action('woocommerce_settings_tabs_'.$this->id, array($this,'show_settings_tab'));
+                //save settings tab 
+                add_action('woocommerce_update_options_'.$this->id, array($this,'update_settings_tab'));
+                //add tabs select field
+                add_action('woocommerce_admin_field_'.$this->post_type,array($this, 'show_'.$this->post_type.'_field'), 10);
+                //save tabs select field
+                add_action('woocommerce_update_option_'.$this->post_type,array($this, 'save_'.$this->post_type.'_field'), 10);
                 //ajax search handler
                 //add_action('wp_ajax_woocommerce_json_custom_tabs', array($this,'woocommerce_json_custom_tabs'));
                 //register_post_type
@@ -105,9 +103,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 						'id'       => 'wc_'.$this->id.'_section_title'
 					),
 					'title' => array(
-						'name'     => __('Mode', 'wooExtraOptions'),
+						'name'     => __( 'Mode', 'wooExtraOptions' ),
 						'type'     => 'select',
-						'desc'     => __('Select the type of autocompletion you want to activate.', 'wooExtraOptions'),
+						'desc'     => __( 'Select the type of autocompletion you want to activate.', 'wooExtraOptions' ),
 						'desc_tip' => true,
 						'default'  => 'off',
 						'id'       => 'wc_'.$this->id.'_mode',
@@ -151,7 +149,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 						$order->update_status('completed');
 					}
 				} elseif ($mode == 'paid') {
-					add_filter('woocommerce_payment_complete_order_status', 'autocompletePaidOrders', 10, 2);
+					add_filter( 'woocommerce_payment_complete_order_status', 'autocompletePaidOrders', 10, 2 );
 					/**
 					 * autocompletePaidOrders 
 					 * Register custom tabs Post Type
@@ -166,7 +164,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 						return $order_status;
 					}
 				} elseif ($mode == 'virtual') {
-					add_filter('woocommerce_payment_complete_order_status', 'autocompleteVirtualOrders', 10, 2);
+					add_filter( 'woocommerce_payment_complete_order_status', 'autocompleteVirtualOrders', 10, 2 );
 					/**
 					 * autocompleteVirtualOrders 
 					 * Register custom tabs Post Type
@@ -201,8 +199,6 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 		}//end MG_Woo_Extra_Options class.
 		new MG_Woo_Extra_Options();
 	}
-} elseif (defined('WOOCOMMERCE_VERSION') && version_compare(WOOCOMMERCE_VERSION, '2.1', '<')) {
-	wc_add_notice(sprintf(__("This plugin requires WooCommerce 2.1 or higher!", "wooExtraOptions" ), 'error'));
 } else {
     /**
      * Check if WooCommerce is up and running
