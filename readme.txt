@@ -12,10 +12,10 @@ Do you hate WooCommerce for obliging you to manually approve every order placed 
 
 == Description ==
 
-WooCommerce by design allows to automatically mark as "Compelted" only orders for products marked as both "Virtual" and "Downloadable". This plugin actually extend this feature through 3 different modes:    
-1. Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
-1. All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
-1. All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+WooCommerce by design allows to automatically mark as "Completed" only orders for products marked as both "Virtual" and "Downloadable". This plugin actually extend this feature through 3 different modes:    
+* Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successful payment.      
+* All Paid Products: orders for any product are turned to "Completed" upon successful payment.      
+* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
 Please be aware that the third mode allows the customer to immediately access the product (if downloadable, for example) whether or not the payment was performed.
 
 **WooCommerce Product Bundles**    
