@@ -3,21 +3,23 @@ Contributors: rashef
 Donate link: http://cl.ly/2C2W181j1G2g
 Tags: WooCommerce, order, complete, virtual, autocomplete
 Requires at least: 3.3
-Tested up to: 4.0.0
-Stable tag: 1.0
+Tested up to: 4.0.1
+Stable tag: 1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin allows to automatically mark orders as Completed.
+Do you hate WooCommerce for obliging you to manually approve every order placed for non-downloadable goods? This plugin is the answer, since allows to automatically mark orders as Completed through 3 different modes.
 
 == Description ==
 
 WooCommerce by design allows to automatically mark as "Compelted" only orders for products marked as both "Virtual" and "Downloadable". This plugin actually extend this feature through 3 different modes:
-
-* Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
-* All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
-* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.      
+	* All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+	* All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
 Please be aware that the third mode allows the customer to immediately access the product (if downloadable, for example) whether or not the payment was performed.
+
+*WooCommerce Product Bundles*
+Please consider that if you selected "Virtual Paid Product Only" mode, you must activate "Non-bundled shipping" for the product bundle if you want the autocomplete to work.
 
 == Installation ==
 
@@ -43,31 +45,31 @@ Please deactivate my plugin (or select mode "Off"), test with a product marked a
 
 == Changelog ==
 
-= 1.0 =
-* Plugin completely rewritten to comply with WordPress 4.0 and WooCommerce 2.0.      
-* Added 3 different modes to ativate the plugin:       
-** Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.           
-** All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
-** All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
-* Added a settings page (in WooCommerce dashboard) to select the mode we want to activate (under WooCommerce > Settings > Woo Extra Options).      
-	
-= v0.1.2 =
-* Updated compatibility.     
-* Added localization support.     
-* Added Italian localization.     
-* Added Spanish localization.     
+= 1.1 =
+	* Solved PHP Notices and Warnings
+	* Plugin is now compatible with WooCommerce Product Bundles
 
-= v0.1.1 =
-* Added links to support and the official page.     
+= 1.0 =
+    * Plugin completely rewritten to comply with WordPress 4.0 and WooCommerce 2.0.      
+	* Added 3 different modes to ativate the plugin:       
+	    * Virtual Paid Products Only: order for products marked as "Virtual" will be turned to "Completed" upon successfull payment.           
+	    * All Paid Products: orders for any product are turned to "Completed" upon successfull payment.      
+	    * All Products: each and every order is turned to "Completed" irrespective for the payment method and whether or not the payment happened.      
+    * Added a settings page (in WooCommerce dashboard) to select the mode we want to activate (under WooCommerce > Settings > Woo Extra Options).      
 	
-= v0.1 =
-* First release.     
+= 0.1.2 =
+    * Updated compatibility.     
+    * Added localization support.     
+    * Added Italian localization.     
+    * Added Spanish localization.     
+
+= 0.1.1 =
+    * Added links to support and the official page.     
+	
+= 0.1 =
+    * First release.     
 
 == Upgrade notice ==
 
-The plugin has been completely rewritten to meet requirements for WP4 and WooCommerce 2.0.      
-A new tab has been added to WooCommerce settings in the Dashboard to select in which mode you want the plugin to work:    
-* autocomplete only orders for virtual product     
-* autocomplete every order once paid     
-* autocomplete every order even if not paid     
-Enjoy!
+The latest version of the plugin introduced some PHP Notice and Warning messages. All of them are solved now.
+The plugin is now compatible with WooCommerce Product Bundles: please read the description to understand how to configure your bundle.
